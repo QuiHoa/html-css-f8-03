@@ -23,11 +23,12 @@ body {
 a {
     text-decoration: none;
     color: black;
+    display: inline-block;
 }
 
 .container {
     width: 1170px;
-    max-width: calc(100%-24px);
+    max-width: calc(100% - 24px);
     margin: 0px auto;
 }
 
@@ -86,7 +87,11 @@ header .box {
     background-color: #fff;
 }
 
-.logo_brand {
+.logo__text {
+    padding-left: 6px;
+}
+
+.logo__brand {
     display: block;
     text-align: right;
     color: #FFF;
@@ -95,7 +100,7 @@ header .box {
 
 }
 
-.logo_brand-small {
+.logo__brand-small {
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.2em;
@@ -124,6 +129,7 @@ ul.main-menu li:last-of-type {
 }
 
 ul.main-menu li a {
+    position: relative;
     padding: 8px 16px;
     color: #C9D2DA;
     text-align: center;
@@ -134,13 +140,46 @@ ul.main-menu li a {
 
 ul.main-menu li a:hover,
 ul.main-menu li a.active {
+    font-weight: 600;
     color: #fff;
-    text-shadow: 0px 0px 0px currentColor;
 }
 
+ul.main-menu li a:not(.active):before {
+    display: block;
+    content: attr(title);
+    font-weight: 600;
+    color: #000;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+
+}
+
+ul.main-menu li a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #2E80CE;
+    width: 0;
+    height: 3px;
+    transition: ease-in-out 0.25s;
+}
+
+ul.main-menu li a:hover::after {
+    width: calc(100% - 32px);
+}
+
+ul.main-menu li:first-of-type a:hover::after,
+ul.main-menu li:last-of-type a:hover::after {
+    width: calc(100% - 16px);
+}
+
+ul.main-menu li:first-of-type a.active::before,
 ul.main-menu li a.active::before {
-    position: relative;
-    top: -2px;
+    position: absolute;
+    left: -12px;
+    top: 19px;
     display: inline-block;
     content: "";
     background-color: #fff;
@@ -148,6 +187,10 @@ ul.main-menu li a.active::before {
     height: 6px;
     border-radius: 50%;
     margin-right: 8px;
+}
+
+ul.main-menu li a.active::before {
+    left: 3px;
 }
 
 ul.main-menu li:first-of-type a {
@@ -160,12 +203,27 @@ ul.main-menu li:last-of-type a {
 
 /* Action */
 .header-action .Log-in {
+    position: relative;
     padding: 2px 2px;
     color: #C9D2DA;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.75;
     margin-right: 28px;
+}
+
+.header-action a.Log-in::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #2E80CE;
+    width: 0;
+    height: 3px;
+    transition: ease-in-out 0.25s;
+}
+
+.header-action .Log-in:hover::after {
+    width: 100%;
 }
 
 .header-action {
