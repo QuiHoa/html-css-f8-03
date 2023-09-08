@@ -3,6 +3,10 @@ body {
     scroll-behavior: smooth;
 }
 
+:root {
+    --primary-color: #10375C;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -13,4 +17,207 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100%-24px);
+    margin: 0px auto;
+}
+
+.btn {
+    display: inline-block;
+    width: 205px;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 30px;
+    background-color: #2E80CE;
+
+
+}
+
+/* =============Header================== */
+header {
+    background-color: var(--primary-color);
+    padding-top: 30px;
+    padding-bottom: 12px;
+}
+
+header .box {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu */
+nav {
+    margin-left: auto;
+    margin-right: 222px;
+}
+
+ul.main-menu {
+    display: flex;
+}
+
+ul.main-menu li {
+    margin: 0px 6px;
+}
+
+ul.main-menu li:first-of-type {
+    margin-left: 0px;
+}
+
+ul.main-menu li:last-of-type {
+    margin-right: 0px;
+}
+
+ul.main-menu li a {
+    padding: 8px 16px;
+    color: #C9D2DA;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+ul.main-menu li a:hover,
+ul.main-menu li a.active {
+    color: #fff;
+    text-shadow: 0px 0px 0px currentColor;
+}
+
+ul.main-menu li a.active::before {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    content: "";
+    background-color: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+ul.main-menu li:first-of-type a {
+    padding-left: 0px;
+}
+
+ul.main-menu li:last-of-type a {
+    padding-right: 0px;
+}
+
+/* Action */
+.header-action .Log-in {
+    padding: 2px 2px;
+    color: #C9D2DA;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-right: 28px;
+}
+
+.header-action {
+    display: flex;
+    align-items: center;
+}
+
+.header-action .sign-up {
+    width: 104px;
+    padding: 8px 0px;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.header-action .sign-up:hover {
+    opacity: 0.9;
+}
+
+/* ============= End Header================== */
+/* =================Hero==================== */
+.hero {
+    padding-top: 64px;
+    padding-bottom: 110px;
+    background-color: var(--primary-color);
+}
+
+.hero .box {
+    display: flex;
+    align-items: center;
+
+}
+
+.hero .desc {
+    width: 44.2%;
+    margin-right: 113px;
+}
+
+.hero .desc h1.title {
+    color: #FFF;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -1.4px;
+}
+
+.hero .desc p.title {
+    margin: 22px 0px 38px;
+    color: #C9D2DA;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.66667;
+}
+
+.hero .box-btn {
+    display: flex;
+    align-items: center;
+}
+
+.hero .desc span.phone {
+    margin-left: 38px;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66667;
+}
+
+.hero .desc .hero-cta {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66667;
+}
+
+.hero div.pic {
+    display: flex;
+    align-items: center;
+}
+
+.hero div.pic figure:first-of-type {
+    width: 330px;
+    height: 540px;
+}
+
+.hero div.pic figure:last-of-type {
+    width: 210px;
+    height: 410px;
+}
+
+.hero div.pic figure img {
+    border-radius: 6px;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.hero div.pic figure:last-of-type img {
+    border-radius: 0px 6px 6px 0px;
+}
+
+/* ================End Hero=================== */
