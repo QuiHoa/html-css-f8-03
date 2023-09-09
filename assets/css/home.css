@@ -333,35 +333,52 @@ ul.main-menu li:last-of-type a {
 }
 
 /* ================End Hero=================== */
-/* =================Services================== */
 .services {
     padding: 170px 0px;
 }
 
-.services__title {
-    color: var(--primary-color);
+/* =========Title-Common============== */
+.title-common {
     text-align: center;
+}
+
+.title-common h2.title {
+    color: var(--primary-color);
     font-size: 5rem;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -1px;
 }
 
-.services__desc {
+.title-common .desc {
     width: 468px;
-    margin: 18px auto 70px;
-    text-align: center;
+    margin-top: 18px;
     color: var(--text-color);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.75;
 }
 
-.services__pic {
-    display: flex;
-    justify-content: space-between;
+/* =========End Title-Common============ */
+/* =================Services================== */
+.services {
+    padding: 170px 0px;
 }
 
+.services .title-common .desc {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Bottom */
+.services__pic {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Pic */
 .services__pic figure.image {
     width: 570px;
     height: 570px;
@@ -374,10 +391,16 @@ ul.main-menu li:last-of-type a {
     border-radius: 12px;
 }
 
+/* Items */
+.services__link {
+    display: block;
+}
+
 .services__items .item__list {
-    padding: 21px 18px 20px 22px;
+    padding: 24px 18px 22px 22px;
     display: flex;
     border-radius: 10px;
+    transition: ease-in-out 0.25s;
 }
 
 .services__items .item__list:hover {
@@ -386,7 +409,8 @@ ul.main-menu li:last-of-type a {
     box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
 }
 
-.services__items .item__pic {
+/* Icon */
+.services__items .item__icon {
     width: 60px;
     height: 60px;
     text-align: center;
@@ -395,15 +419,18 @@ ul.main-menu li:last-of-type a {
     background-color: #EFF6FD;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
     margin-right: 19px;
+    transition: ease 0.25s;
 }
 
-.services__items .item__list:hover .item__pic {
+/* Icon */
+.services__items .item__list:hover .item__icon {
     background-color: #2E80CE;
 }
 
-.services__items .item__pic svg {
+.services__items .item__icon svg {
     margin: auto;
     color: var(--primary-color);
+    transition: ease 0.25s;
 }
 
 .services__items .item__list:hover svg {
@@ -426,9 +453,135 @@ ul.main-menu li:last-of-type a {
 }
 
 .services-cta {
+
     margin-top: 55px;
     color: #fff;
     font-size: 1.8rem;
 }
 
 /* =================End Services=============== */
+/* ================How it works================= */
+.HIW {
+    background-color: #F6FBFF;
+    padding: 100px 0px;
+}
+
+.HIW .title-common {
+    text-align: left;
+}
+
+.HIW__row {
+    margin-top: 70px;
+}
+
+.HIW__row .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 30px;
+}
+
+.row__block {
+    position: relative;
+    top: 0px;
+    background: #fff;
+    border: 16px solid #EAF6FF;
+    border-radius: 4px;
+    padding: 43px 0px 43px 42px;
+    transition: all 0.25s;
+    margin-top: 16px;
+}
+
+.row__block:hover {
+    top: -16px;
+    border: 16px solid #2E80CE;
+}
+
+.row__block figure.icon {
+    width: 72px;
+    height: 72px;
+}
+
+.HIW__row h3.title {
+    margin-top: 18px;
+    color: #10375C;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38462;
+}
+
+.HIW__row p.desc {
+    margin: 28px 0px 18px;
+    width: 254px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.HIW__row a.learn-more {
+    color: #2E80CE;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* =================End How it works============ */
+/* =================Features ===================== */
+.features {
+    padding: 170px 0px;
+}
+
+.features .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PIC */
+.features__pic {
+    position: relative;
+    display: flex;
+    width: 48.7%;
+    height: 491px;
+}
+
+.features__image {
+    height: 370px;
+}
+
+.features__image:first-of-type {
+    width: 512px;
+}
+
+.features__image:last-of-type {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 332px;
+}
+
+.features__image img {
+    border-radius: 6px;
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.features .title-common {
+    text-align: left;
+}
+
+/* Desc */
+.features__desc h2.title {
+    width: 470px;
+}
+
+.features-cta {
+    margin-top: 38px;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66667;
+}
+
+/* =================End Features================== */
