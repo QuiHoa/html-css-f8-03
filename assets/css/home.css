@@ -41,6 +41,7 @@ a {
     border-radius: 30px;
     background-color: #2E80CE;
     line-height: 1.66667;
+    color: #fff;
 }
 
 .btn:hover {
@@ -528,7 +529,7 @@ ul.main-menu li:last-of-type a {
 /* =================End How it works============ */
 /* =================Features ===================== */
 .features {
-    padding: 170px 0px;
+    padding: 170px 0px 85px;
 }
 
 .features .box {
@@ -585,3 +586,240 @@ ul.main-menu li:last-of-type a {
 }
 
 /* =================End Features================== */
+/* ==================Doctors===================== */
+.doctors {
+    padding: 85px 0px 170px;
+}
+
+.doctors h2.title {
+    margin-bottom: 38px;
+}
+
+.doctors .box {
+    display: flex;
+    overflow: hidden;
+}
+
+.doctors__member {
+    width: 100%;
+    flex-shrink: 0;
+    margin: 70px 0px 38px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px 30px;
+}
+
+.doctors__member div.image {
+    padding-top: 28px;
+    background-color: #EAF6FF;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.member img {
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: 290px;
+    object-fit: cover;
+    transition: ease-in-out 0.2s;
+}
+
+.member:hover img {
+    scale: 1.1 1.1;
+}
+
+.doctors__member h3.name {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.75;
+
+}
+
+.doctors__member p.desc {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.85714;
+}
+
+.pageMove {
+    display: flex;
+    justify-content: center;
+    gap: 0px 18px;
+}
+
+.pageMove .move {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    border: 1px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.pageMove .move:hover {
+    background-color: #2E80CE;
+    border: transparent;
+    color: #fff;
+}
+
+/* ==================End Doctors============== */
+/* ====================App================== */
+.app {
+    position: relative;
+}
+
+.app__pic {
+    position: absolute;
+    left: 5.98%;
+    bottom: 0px;
+}
+
+.app__pic img {
+    vertical-align: bottom;
+}
+
+.app__desc {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    height: 427px;
+    background-color: #2E80CE;
+    border-radius: 4px;
+}
+
+.app__desc .box {
+    width: 50.085%;
+    margin-right: 70px;
+}
+
+.app__desc h2.title,
+.app__desc p.desc {
+    color: #fff;
+    text-align: left;
+}
+
+.app__desc p.desc {
+    width: inherit;
+}
+
+.app__icon {
+    margin-top: 38px;
+}
+
+.app__icon .icon {
+    display: inline-block;
+    margin-right: 28px;
+}
+
+/* ====================End App================= */
+/* ======================Inform================= */
+.inform {
+    padding: 170px 0px 85px;
+}
+
+.inform .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inform .pageMove {
+    justify-content: flex-start;
+}
+
+.inform__title {
+    width: 470px;
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.inform__read {
+    margin: 28px 0px;
+    color: var(--primary-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.55556;
+    text-decoration-line: underline;
+}
+
+.inform__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.inform__content div.image,
+.inform__content div.image a {
+    display: inline-block;
+    width: 270px;
+    height: 172px;
+    vertical-align: bottom;
+    overflow: hidden;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.inform__content div.image img {
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: ease 0.25s;
+}
+
+.inform__content .content:hover img {
+    scale: 1.1 1.1;
+}
+
+.inform__content .content__desc {
+    border-radius: 0px 0px 12px 12px;
+    border: 1px solid #E8EBEE;
+    padding: 18px 21px 21px;
+    transition: ease 0.25s;
+}
+
+.inform__content .content:hover .content__desc {
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.inform__content h3.title a {
+    width: 224px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.625;
+}
+
+.inform__content p.desc a {
+    width: 226px;
+    margin: 10px 0px 12px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.71429;
+}
+
+.inform__content a.learn-more {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.inform__content a.learn-more:hover {
+    color: #2E80CE;
+    text-decoration: underline;
+}
+
+/* =====================End Inform================== */
